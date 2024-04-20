@@ -1,0 +1,209 @@
+/* RESPONSIVENESS*/
+
+
+
+
+/* COLOUR VARIABLES 
+============================================== */
+:root {
+  --dark: #000000;
+  --light: #FFFFFF
+}
+
+
+
+/* BASE STYLES
+============================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 0;
+  font-size: 16px;
+  line-height: 1.2;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background: var(--light);
+  display: grid;
+  align-items: center;
+  font-family: "nobel", sans-serif;
+}
+
+img {
+  max-width: 85%;
+  height: auto;
+}
+
+main {
+  padding: 1em;
+}
+
+
+
+/* HEADER
+============================================== */
+
+.menu-icon{
+  text-align: right;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1em;
+  background-color: rgb(237, 174, 174);
+  border-bottom: 2px solid var(--dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  z-index: 2;
+}
+
+.menu-icon {
+  text-align: right;
+}
+
+
+
+/* NAVIGATION
+============================================== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 160, 160);
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  translate: 0 -100vh;
+  opacity: 0%;
+  transition: all 0.5s;
+}
+
+.menu-active nav {
+  translate: 0 0;
+  opacity: 100%;
+}
+
+nav a {
+  font-size: 2em;
+  font-weight: 800;
+  color: var(--light);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  padding: 16px;
+  display: block;
+  transition: all 0.5s;
+  font-family: "nobel", sans-serif;
+}
+
+nav a:hover {
+  opacity: 50%;
+}
+
+
+
+/* GRID SYSTEM
+============================================== */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+.home-info {
+  text-align: center;
+}
+
+.round-top{
+  border-radius: 2em 2em 0 0;
+}
+
+
+/* TYPOGRAPHY
+============================================== */
+h1{
+  font-weight: 800;
+  font-size: 2.5em;
+  line-height: 98%;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin: 0 0 0.5em 0;
+  color: rgb(255, 160, 160);
+}
+
+p{
+  font: weight 400;
+  margin: 0 0 1.5em 0;
+  color: rgb(36, 80, 128 );
+}
+
+
+
+/* BUTTONS
+============================================== */
+.button{
+  color: rgb(255, 160, 160);
+  font-weight:600;
+  font-style: italic;
+  text-transform: uppercase;
+  border: 2px solid var(--dark);
+  margin: 4px 2px;
+  padding: 10px;
+  border-radius: 1em;
+  border-color:rgb(36, 80, 128);
+  transition: all 0.5s;
+}
+
+.button:hover{
+  background-color:rgb(36, 80, 128);
+  color:var(--light);
+}
+
+/* CARDS
+============================================== */
+
+
+
+
+/* FOOTER
+============================================== */
+
+
+
+
+/* MEDIA QUERIES
+============================================== */
+@media (min-width:900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .span-2 {
+    grid-column-end: span 2;
+  }
+
+  .home-info{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: right;
+    align-self: end;
+  }
+
+  h1{
+    font-size: 5em;
+  }
+
+}
